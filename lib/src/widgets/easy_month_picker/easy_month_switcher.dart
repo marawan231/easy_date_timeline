@@ -47,7 +47,7 @@ class _EasyMonthSwitcherState extends State<EasyMonthSwitcher> {
     final screenWidth = MediaQuery.sizeOf(context).width;
     return Container(
       width: screenWidth,
-      height: 63,
+      height: screenWidth * 0.15,
       // padding: const EdgeInsets.symmetric(horizontal: 10),
 
       // margin: EdgeInsets.symmetric(horizontal: 20),
