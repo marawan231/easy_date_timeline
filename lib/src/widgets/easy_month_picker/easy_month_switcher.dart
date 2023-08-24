@@ -51,7 +51,7 @@ class _EasyMonthSwitcherState extends State<EasyMonthSwitcher> {
         height: screenWidth * 0.15,
         // padding: const EdgeInsets.symmetric(horizontal: 10),
 
-        // margin: EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.only(bottom: 16),
         decoration: BoxDecoration(
           color: const Color(0xffEFEEF3),
           borderRadius: BorderRadius.circular(12.0),
