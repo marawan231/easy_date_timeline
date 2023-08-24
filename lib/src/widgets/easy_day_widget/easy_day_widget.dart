@@ -51,7 +51,7 @@ class EasyDayWidget extends StatelessWidget {
       borderRadius: _dayBorderRadius,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: EasyConstants.animationDuration),
-        width: width,
+        width: MediaQuery.of(context).size.width * 0.2,
         height: height,
         decoration: isSelected ? _activeDayDecoration : _inactiveDayDecoration,
         child: _buildDayStructure(
@@ -232,7 +232,7 @@ class EasyDayWidget extends StatelessWidget {
         items = [
           _buildDayString(isToday),
           const SizedBox(
-            width: EasyConstants.landscapeDayPadding,
+            height: 8,
           ),
           _buildDayNumber(isToday),
         ];

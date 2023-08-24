@@ -39,38 +39,38 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _mainExample(),
-            const SizedBox(
-              height: 32.0,
-            ),
+            // _mainExample(),
+            // const SizedBox(
+            //   height: 32.0,
+            // ),
             _customBackgroundExample(),
             const SizedBox(
               height: 32.0,
             ),
-            _changeTodyHighlightColorExample(),
-            const SizedBox(
-              height: 32.0,
-            ),
-            _changeDayStructureExample(),
-            const SizedBox(
-              height: 32.0,
-            ),
-            _landscapeViewExample(),
-            const SizedBox(
-              height: 32.0,
-            ),
-            _localeExample(),
-            const SizedBox(
-              height: 32.0,
-            ),
-            _changeHeaderAppearanceExample(),
-            const SizedBox(
-              height: 32.0,
-            ),
-            _customizeDayAppearanceExample(),
-            const SizedBox(
-              height: 32.0,
-            ),
+            // _changeTodyHighlightColorExample(),
+            // const SizedBox(
+            //   height: 32.0,
+            // ),
+            // _changeDayStructureExample(),
+            // const SizedBox(
+            //   height: 32.0,
+            // ),
+            // _landscapeViewExample(),
+            // const SizedBox(
+            //   height: 32.0,
+            // ),
+            // _localeExample(),
+            // const SizedBox(
+            //   height: 32.0,
+            // ),
+            // _changeHeaderAppearanceExample(),
+            // const SizedBox(
+            //   height: 32.0,
+            // ),
+            // _customizeDayAppearanceExample(),
+            // const SizedBox(
+            //   height: 32.0,
+            // ),
           ],
         ),
       ),

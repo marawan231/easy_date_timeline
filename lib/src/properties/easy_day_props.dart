@@ -6,7 +6,7 @@ final class EasyDayProps {
   const EasyDayProps({
     this.activeDayDecoration,
     this.inactiveDayDecoration,
-    this.dayStructure = DayStructure.monthDayNumDayStr,
+    this.dayStructure = DayStructure.dayStrDayNumMonth,
     this.activeBorderRadius = EasyConstants.dayWidgetBorderRadius,
     this.inactiveBorderRadius = EasyConstants.dayWidgetBorderRadius,
     this.borderColor = EasyColors.dayWidgetBorderColor,
