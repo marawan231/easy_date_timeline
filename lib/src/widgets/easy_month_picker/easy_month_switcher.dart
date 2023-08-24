@@ -48,26 +48,29 @@ class _EasyMonthSwitcherState extends State<EasyMonthSwitcher> {
     return Container(
       width: screenWidth,
       height: 63,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      // padding: const EdgeInsets.symmetric(horizontal: 10),
+
       // margin: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         color: const Color(0xffEFEEF3),
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          InkWell(
-            onTap: () {
-              if (_isFirstMonth) {
-                return;
-              }
-              _currentMonth--;
-              widget.onMonthChange?.call(_yearMonths[_currentMonth]);
-            },
-            child: Icon(
-              Icons.arrow_back_ios_rounded,
-              color: _isFirstMonth ? Colors.grey : null,
+          Flexible(
+            child: IconButton(
+              onPressed: () {
+                if (_isFirstMonth) {
+                  return;
+                }
+                _currentMonth--;
+                widget.onMonthChange?.call(_yearMonths[_currentMonth]);
+              },
+              icon: Icon(
+                Icons.arrow_back_ios_rounded,
+                color: _isFirstMonth ? Colors.grey : null,
+              ),
             ),
           ),
           const Spacer(),
@@ -82,17 +85,19 @@ class _EasyMonthSwitcherState extends State<EasyMonthSwitcher> {
             ),
           ),
           const Spacer(),
-          InkWell(
-            onTap: () {
-              if (_isLastMonth) {
-                return;
-              }
-              _currentMonth++;
-              widget.onMonthChange?.call(_yearMonths[_currentMonth]);
-            },
-            child: Icon(
-              Icons.arrow_forward_ios_rounded,
-              color: _isLastMonth ? Colors.grey : null,
+          Flexible(
+            child: IconButton(
+              onPressed: () {
+                if (_isLastMonth) {
+                  return;
+                }
+                _currentMonth++;
+                widget.onMonthChange?.call(_yearMonths[_currentMonth]);
+              },
+              icon: Icon(
+                Icons.arrow_forward_ios_rounded,
+                color: _isLastMonth ? Colors.grey : null,
+              ),
             ),
           ),
         ],
