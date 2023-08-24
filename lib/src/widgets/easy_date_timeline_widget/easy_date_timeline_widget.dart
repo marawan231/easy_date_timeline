@@ -114,8 +114,8 @@ class _EasyDateTimeLineState extends State<EasyDateTimeLine> {
             Padding(
               padding: _headerProps.padding ??
                   const EdgeInsets.only(
-                    left: EasyConstants.timelinePadding * 2,
-                    right: EasyConstants.timelinePadding,
+                    // left: EasyConstants.timelinePadding * 2,
+                    // right: EasyConstants.timelinePadding / 2,
                     bottom: EasyConstants.timelinePadding,
                   ),
               child: Row(
