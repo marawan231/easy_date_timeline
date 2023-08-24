@@ -45,62 +45,64 @@ class _EasyMonthSwitcherState extends State<EasyMonthSwitcher> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.sizeOf(context).width;
-    return Container(
-      width: screenWidth,
-      height: screenWidth * 0.15,
-      // padding: const EdgeInsets.symmetric(horizontal: 10),
+    return Expanded(
+      child: Container(
+        // width: screenWidth,
+        height: screenWidth * 0.15,
+        // padding: const EdgeInsets.symmetric(horizontal: 10),
 
-      // margin: EdgeInsets.symmetric(horizontal: 20),
-      decoration: BoxDecoration(
-        color: const Color(0xffEFEEF3),
-        borderRadius: BorderRadius.circular(12.0),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: IconButton(
-              onPressed: () {
-                if (_isFirstMonth) {
-                  return;
-                }
-                _currentMonth--;
-                widget.onMonthChange?.call(_yearMonths[_currentMonth]);
-              },
-              icon: Icon(
-                Icons.arrow_back_ios_rounded,
-                color: _isFirstMonth ? Colors.grey : null,
+        // margin: EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+          color: const Color(0xffEFEEF3),
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(
+              child: IconButton(
+                onPressed: () {
+                  if (_isFirstMonth) {
+                    return;
+                  }
+                  _currentMonth--;
+                  widget.onMonthChange?.call(_yearMonths[_currentMonth]);
+                },
+                icon: Icon(
+                  Icons.arrow_back_ios_rounded,
+                  color: _isFirstMonth ? Colors.grey : null,
+                ),
               ),
             ),
-          ),
-          const Spacer(),
-          Expanded(
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                _yearMonths[_currentMonth].name,
-                textAlign: TextAlign.center,
-                style: widget.style,
+            // const Spacer(),
+            Expanded(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  _yearMonths[_currentMonth].name,
+                  textAlign: TextAlign.center,
+                  style: widget.style,
+                ),
               ),
             ),
-          ),
-          const Spacer(),
-          Flexible(
-            child: IconButton(
-              onPressed: () {
-                if (_isLastMonth) {
-                  return;
-                }
-                _currentMonth++;
-                widget.onMonthChange?.call(_yearMonths[_currentMonth]);
-              },
-              icon: Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: _isLastMonth ? Colors.grey : null,
+            // const Spacer(),
+            Flexible(
+              child: IconButton(
+                onPressed: () {
+                  if (_isLastMonth) {
+                    return;
+                  }
+                  _currentMonth++;
+                  widget.onMonthChange?.call(_yearMonths[_currentMonth]);
+                },
+                icon: Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  color: _isLastMonth ? Colors.grey : null,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
     // SizedBox(
